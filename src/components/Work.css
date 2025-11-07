@@ -1,0 +1,231 @@
+.work-section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  padding: 4rem 2rem;
+  background: #F5E6D3;
+}
+
+.work-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.work-title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #365194;
+  margin-bottom: 3rem;
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.work-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.work-item {
+  width: 100%;
+  padding: 2rem 0;
+  border-bottom: 3px solid #d4c4b0;
+  transition: border-color 0.2s;
+}
+
+.work-item-card {
+  background: #ffffff;
+  border: 6px solid #365194;
+  box-shadow: 8px 8px 0 0 #365194;
+  padding: 2rem;
+  border-bottom: none;
+  margin-bottom: 2rem;
+  transition: transform 0.1s, box-shadow 0.1s;
+  border-radius: 0;
+}
+
+.work-item-card:nth-child(odd) {
+  background: #365194;
+  border: 6px solid #1a1a1a;
+  box-shadow: 8px 8px 0 0 #365194;
+}
+
+.work-item-card:nth-child(even) {
+  background: #ffffff;
+  border: 6px solid #365194;
+  box-shadow: 8px 8px 0 0 #365194;
+}
+
+.work-item-card:hover {
+  transform: translate(4px, 4px);
+  box-shadow: 4px 4px 0 0 #365194;
+  border-bottom: none;
+}
+
+.work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.work-info-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.company-logo {
+  height: calc(2rem * 1.2 + 1.3rem * 1.6 + 0.5rem + 0.3rem);
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
+  object-fit: contain;
+  object-position: left center;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.work-item:nth-child(1) .company-logo {
+  height: calc(2rem * 1.2 + 1.3rem * 1.6 + 0.5rem + 0.3rem) * 1.5;
+}
+
+.work-company {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+}
+
+.work-title-text {
+  font-size: 1.3rem;
+  color: #365194;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.work-date {
+  font-size: 1rem;
+  color: #666666;
+  white-space: nowrap;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.work-description {
+  font-size: 1rem;
+  color: #4a4a4a;
+  line-height: 1.8;
+  margin-top: 1rem;
+  font-weight: 400;
+  max-width: 800px;
+}
+
+.work-item-card:nth-child(odd) .work-company {
+  color: #ffffff;
+}
+
+.work-item-card:nth-child(odd) .work-title-text {
+  color: #e8e8e8;
+}
+
+.work-item-card:nth-child(odd) .work-date {
+  color: #e8e8e8;
+}
+
+.work-item-card:nth-child(odd) .work-description {
+  color: #e8e8e8;
+}
+
+.work-item-card:nth-child(even) .work-company {
+  color: #1a1a1a;
+}
+
+.work-item-card:nth-child(even) .work-title-text {
+  color: #365194;
+}
+
+.work-item-card:nth-child(even) .work-date {
+  color: #666666;
+}
+
+.work-item-card:nth-child(even) .work-description {
+  color: #4a4a4a;
+}
+
+
+@media (max-width: 768px) {
+  .work-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .work-list {
+    gap: 2rem;
+  }
+
+  .work-item {
+    padding: 1.5rem 0;
+  }
+
+  .work-header {
+    flex-direction: column;
+  }
+
+  .work-company {
+    font-size: 1.5rem;
+  }
+
+  .company-logo {
+    height: calc(1.5rem * 1.2 + 1.1rem * 1.4 + 0.5rem);
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+  }
+
+  .work-item:nth-child(1) .company-logo {
+    height: calc(1.5rem * 1.2 + 1.1rem * 1.4 + 0.5rem) * 1.5;
+  }
+
+  .work-title-text {
+    font-size: 1.1rem;
+  }
+
+  .work-description {
+    font-size: 0.9rem;
+  }
+
+  .work-item-card {
+    padding: 1.5rem;
+    box-shadow: 6px 6px 0 0 #365194;
+  }
+
+  .work-item-card:hover {
+    box-shadow: 3px 3px 0 0 #365194;
+  }
+
+  .work-item-card:nth-child(odd) {
+    box-shadow: 6px 6px 0 0 #365194;
+  }
+
+  .work-item-card:nth-child(even) {
+    box-shadow: 6px 6px 0 0 #365194;
+  }
+}
